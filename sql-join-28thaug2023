@@ -1,0 +1,50 @@
+--sql code for 28th august wokshop
+create table student(studid int,studname varchar(50));
+insert into student values(1,'Tom');
+insert into student values(2,'John');
+insert into student values(3,'Michael');
+insert into student values(4,'Abdul');
+insert into student values(5,'Chris');
+insert into student values(1,'Tom');
+
+
+drop table student;
+select * from student;
+
+create table score(studid int,marks int);
+insert into score values(2,60);
+insert into score values(1,40);
+insert into score values(3,70);
+insert into score values(4,80);
+insert into score values(3,90);
+insert into score values(6,80);
+select * from score;
+
+
+
+select a.studid,a.studname,b.studid,marks
+from student a left join score b
+on a.studid=b.studid
+
+select a.studid,a.studname,b.studid,marks
+from student a right join score b
+on a.studid=b.studid
+
+select distinct a.studid,a.studname,b.studid,marks
+from student a full join score b
+on a.studid=b.studid
+
+
+
+create table dept(studid int,deptname varchar(50));
+insert into dept values(2,'CS');
+insert into dept values(1,'EC');
+insert into dept values(3,'CV');
+insert into dept values(4,'ME');
+select * from dept;
+
+select a.studid,a.studname,b.studid,marks,c.studid,c.deptname
+from student a join score b
+on a.studid=b.studid
+join dept c
+on a.studid=c.studid
