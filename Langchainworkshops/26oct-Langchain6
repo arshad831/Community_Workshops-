@@ -1,0 +1,50 @@
+
+# Requriment.txt
+openai == 0.27.8
+python-dotenv == 1.0.0
+langchain == 0.0.242
+beautifulsoup4 == 4.12.2
+faiss-cpu==1.7.4
+tiktoken == 0.4.0
+
+
+
+#workshop video
+#https://nas.io/AIguild/sgps
+
+
+
+#ain.oy
+from langchain.chat_models import ChatOpenAI
+from langchain.chains import RetrievalQA
+from langchain.document_loaders import WebBaseLoader
+from langchain.llms import OpenAI
+from langchain.text_splitter import CharacterTextSplitter
+from langchain.vectorstores import FAISS
+from langchain.embeddings import OpenAIEmbeddings
+
+import os
+os.environ['OPENAI_API_KEY'] = 'your api key'
+
+#document-loading
+loader = WebBaseLoader("https://decodingdatascience.com/")
+documents = loader.load()
+text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=20)
+texts = text_splitter.split_documents(documents)
+
+
+# embediing
+
+embeddings = OpenAIEmbeddings()
+docsearch = FAISS.from_documents( texts,embeddings )
+
+
+# call the prompt using chain
+qa = RetrievalQA.from_chain_type(llm=OpenAI(), chain_type ="stuff", retriever = docsearch.as_retriever())
+
+
+#loop of QA
+
+while True:
+    query = input("Ask a question about Data Science & AI\n")
+    print(qa.run(query))
