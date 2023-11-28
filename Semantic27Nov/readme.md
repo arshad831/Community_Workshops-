@@ -1,4 +1,4 @@
-Comuunity Workshop for Semnatic Kerrnel
+Community Workshop for Semnatic Kerrnel
 
 Create a .env file withing the folder in vs code with code
 
@@ -9,5 +9,17 @@ The recordings are available here https://nas.io/AIguild/sgps
 
 Anaconda - Vs code - Python Version 3.11
 
+Install Requirements
+
+![image](https://github.com/arshad831/Community_Workshops-/assets/70535034/7fd445df-e842-4442-88ea-f3a4ad8a167a)
+
+
+Run the Python Program
+
+![image](https://github.com/arshad831/Community_Workshops-/assets/70535034/d8034006-2a1e-4e9e-a43e-4c6c34997a37)
+
+
 The output 
+
+
 ![image](https://github.com/arshad831/Community_Workshops-/assets/70535034/7ea77394-a349-4418-9022-fc8dcd256dcb)
