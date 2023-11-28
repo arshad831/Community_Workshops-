@@ -1,0 +1,2 @@
+semantic-kernel == 0.3.4.dev0
+openai == 0.27.8
