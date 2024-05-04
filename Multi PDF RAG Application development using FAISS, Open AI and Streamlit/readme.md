@@ -8,3 +8,9 @@ and Explain the basic workings of Streamlit
 
 Speaker : Dr Anish Roychowdhury, Data Science Consultant and Adjunct Faculty
 SPJAIN Global
+
+
+![image](https://github.com/arshad831/Community_Workshops-/assets/70535034/6477ab1b-9a8b-4bb0-8623-48aef561753b)
+
+
+Recording : https://nas.io/AIguild/sgps
